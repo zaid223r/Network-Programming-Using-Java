@@ -1,5 +1,3 @@
-package lab;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -7,7 +5,7 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 
-public class GUILAB extends JFrame implements ActionListener{
+public class Calculator extends JFrame implements ActionListener{
     private JTextField num1,num2;
     private JPanel input;
 
@@ -23,7 +21,7 @@ public class GUILAB extends JFrame implements ActionListener{
         frame.setResizable(true);
         
     }   
-    public GUILAB(){
+    public Calculator(){
         num1 = new JTextField(20);
         num2 =new JTextField(20);
         input = new JPanel();
