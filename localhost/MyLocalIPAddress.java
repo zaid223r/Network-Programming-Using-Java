@@ -1,5 +1,3 @@
-package net.work;
-
 import java.net.*;
 
 public class MyLocalIPAddress {
