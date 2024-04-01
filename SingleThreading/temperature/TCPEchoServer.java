@@ -41,8 +41,6 @@ public class TCPEchoServer
          Scanner input = new Scanner(link.getInputStream()); 
          PrintWriter output =new PrintWriter(link.getOutputStream(),true); //Step 3.
          String message;
-         String[] arrOfwords = {"old","happy","good"};
-         String[] arrOfObes = {"new","sad","bad"};
          do{
             message = input.nextLine();
             String[] arrOfStr = message.split(" : ",2);
@@ -55,19 +53,6 @@ public class TCPEchoServer
             {
                 int result = (Integer.parseInt(arrOfStr[1]) - 32) * 5/9;
                 output.println(arrOfStr[1] + " in celicues is "+ result);
-            }
-            else if (arrOfStr[0].equals("dict"))
-            {
-                boolean check = false;
-                do{
-                for(int i = 0; i < arrOfwords.length; i++)
-                {
-                    if (arrOfwords[i].equals(arrOfStr[1]))
-                    {
-                        output.println("The obasite of "+arrOfwords[i]+" is "+arrOfObes[i]);
-                        check = true;
-                    }
-                }}while(check == false);
             }
             else
             {
